@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+
+<h1>home page</h1>
+
+<span>Request Method - {{request_method}}</span>
+
+<form method = "POST" action = "/">
+    <input type="text" placeholder = "first name" name="first_name" id="">
+    <input type="text" placeholder = "last name" name="last_name" id="">
+    <input type="submit">
+</form>
+
+{% for i in list_of_names %} 
+<ul>
+    <li>{{i}}</li>
+</ul>
+{% endfor %}
+
+
+{% endblock content %}
